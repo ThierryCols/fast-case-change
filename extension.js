@@ -108,17 +108,21 @@ function toPascalCase(targetString) {
         return pascalStr.concat(word[0].toUpperCase().concat(word.slice(1)));
     }, '');
 }
+exports.toPascalCase = toPascalCase;
 
 function toCamelCase(targetString) {
     return getWords(targetString).reduce((camelString, word) => {
         return camelString.concat(word[0].toUpperCase().concat(word.slice(1)));
     });
 }
+exports.toCamelCase = toCamelCase;
 
 function toSnakeCase(targetString) {
     return getWords(targetString).join('_');
 }
+exports.toSnakeCase = toSnakeCase;
 
 function toKebapCase(targetString) {
     return getWords(targetString).join('-');
 }
+exports.toKebapCase = toKebapCase;
