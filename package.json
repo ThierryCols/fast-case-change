@@ -1,7 +1,7 @@
 {
     "name": "fast-case-change",
     "displayName": "fast-case-change",
-    "description": "cmd-change your string case",
+    "description": "ctrl/cmd-change your string case",
     "version": "0.0.1",
     "publisher": "ThierryCols",
     "engines": {
@@ -11,14 +11,77 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:extension.fastCaseChange.upper",
+        "onCommand:extension.fastCaseChange.lower",
+        "onCommand:extension.fastCaseChange.pascal",
+        "onCommand:extension.fastCaseChange.camel",
+        "onCommand:extension.fastCaseChange.snake",
+        "onCommand:extension.fastCaseChange.kebap"
     ],
     "main": "./extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.fastCaseChange",
-                "title": "Fast Case Change"
+                "command": "extension.fastCaseChange.upper",
+                "title": "Change to upper case"
+            },
+            {
+                "command": "extension.fastCaseChange.lower",
+                "title": "Change to lower case"
+            },
+            {
+                "command": "extension.fastCaseChange.pascal",
+                "title": "Change to Pascal case"
+            },
+            {
+                "command": "extension.fastCaseChange.camel",
+                "title": "Change to camel case"
+            },
+            {
+                "command": "extension.fastCaseChange.snake",
+                "title": "Change to snake case"
+            },
+            {
+                "command": "extension.fastCaseChange.kebap",
+                "title": "Change to kebap case"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.fastCaseChange.upper",
+                "key": "ctrl+K ctrl+U",
+                "mac": "cmd+K cmd+U",
+                "when": "editorHasSelection"
+            },
+            {
+                "command": "extension.fastCaseChange.lower",
+                "key": "ctrl+K ctrl+L",
+                "mac": "cmd+K cmd+L",
+                "when": "editorHasSelection"
+            },
+            {
+                "command": "extension.fastCaseChange.pascal",
+                "key": "ctrl+K ctrl+P",
+                "mac": "cmd+K cmd+P",
+                "when": "editorHasSelection"
+            },
+            {
+                "command": "extension.fastCaseChange.camel",
+                "key": "ctrl+K ctrl+C",
+                "mac": "cmd+K cmd+C",
+                "when": "editorHasSelection"
+            },
+            {
+                "command": "extension.fastCaseChange.snake",
+                "key": "ctrl+K ctrl+S",
+                "mac": "cmd+K cmd+S",
+                "when": "editorHasSelection"
+            },
+            {
+                "command": "extension.fastCaseChange.kebap",
+                "key": "ctrl+K ctrl+K",
+                "mac": "cmd+K cmd+K",
+                "when": "editorHasSelection"
             }
         ]
     },
